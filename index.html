@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+</head>
+
+<body onresize="onResizeScreen()">
+    <div class="main-wrap">
+        <div class="side-bar" id="sidebar">
+            <div class="logo">
+                <img width="150px" src="images/7578294f72f6cb51cd3b7543fd84e8da44739aa4.png" alt="">
+                <div class="d-block-md d-none close-sidebar-icon" onclick="closeSidebar()">
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu--item" onclick="goTab(this, event, 'aboutUs')">
+                    <div class="df">
+                        About Us
+                    </div>
+                </div>
+                <div class="menu--item" onclick="goTab(this, event, 'aboutKollel')">
+                    <div class="df">
+                        About The Kollel
+                    </div>
+                </div>
+                <div class="menu--item" onclick="goTab(this, event, 'aboutShul')">
+                    <div class="df">
+                        About The Shul
+                    </div>
+                </div>
+                <div class="menu--item" onclick="goTab(this, event, 'aboutHuruah')">
+                    <div class="df">
+                        About The Beis Huruah
+                    </div>
+                </div>
+                <div class="menu--item" onclick="goTab(this, event, 'donate')">
+                    <div class="df">
+                        Donate
+                    </div>
+                </div>
+                <div class="menu--item" onclick="goTab(this, event, 'weeklyTorahs')">
+                    <div class="df">
+                        Weekly torahs
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-sidebar" id="bgSidebar" onclick="closeSidebar()"></div>
+        <div class="main">
+            <div class="header" id="navBar">
+                <div class="d-flex-md d-none menu-icon" onclick="openSidebar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <img class="logo-nav" src="images/7578294f72f6cb51cd3b7543fd84e8da44739aa4.png" alt="">
+                <div class="head-nav d-none-md">
+                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutUs')">
+                        About Us
+                    </div>
+                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutKollel')">
+                        About The Kollel
+                    </div>
+                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutShul')">
+                        About The Shul
+                    </div>
+                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutHuruah')">
+                        About The Beis Huruah
+                    </div>
+                    <div class="head-nav--item" onclick="goTab(this, event, 'donate')">
+                        Donate
+                    </div>
+                    <div class="head-nav--item" onclick="goTab(this, event, 'weeklyTorahs')">
+                        Weekly torahs
+                    </div>
+                </div>
+            </div>
+            <div class="content head">
+                <div class="this_week_torah">
+                    <h3>This Weeks Torah</h3>
+                    <img src="images/download.png" alt="download">
+                    <div class="archived">
+                        <p>Archived Torahs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content about">
+                <!-- scroll event target -->
+                <div id="aboutUs"></div>
+                <div class="about_us">
+                    <div class="aboutUs left_top_sign">
+                        <img src="images/abstract.png" alt="abstract">
+                        <h2>About us</h2>
+                    </div>
+                    <div class="about__content">
+                        <h1>Tosh Monsey</h1>
+                        <div class="content__top">
+                            <div class="cont_wrapper">
+                                <div class="cont_img"></div>
+                                <div class="about__text">
+                                    <p class="description sm">Kahilos Tosh-Monsey , a Torah kingdom of worldwide
+                                        acclaim, is a leading educational network with highly recognized achievements.
+                                        Essentially unassuming, this magnificent empire has gained respect and fame
+                                        throughout the Torah world for its high scholastic standard and significant
+                                        contributions to the furtherance of Torah study.
+                                        Tosh-Monsey was founded by the revered Grand Rabbi of Tosh ztz”l. Due to his
+                                        high regard and deep-rooted trust in the capabilities of his esteemed
+                                        son-in-law, Harav Hagaon Reb Avrohom Katz shlit"a, the Rebbe apoointed him to
+                                        lead the institutions of Tosh Monsey. Under his leadership, the yeshiva and
+                                        kolelim have become the prototype for establishments of serious Torah learning.</p>
+                                </div>
+                            </div>
+                            <div class="square">
+                            </div>
+                        </div>
+                        <div class="content__bottom">
+                            <div class="square bottom">
+                            </div>
+                            <div class="cont_wrapper bottom">
+                                <div class="about__text">
+                                    <p class="description sm">Named by the venerable Rebbe ztz”l to indicate its
+                                        purpose, Mishkanos Lavir Yakov truly provides dwelling places for Hashem. The
+                                        yeshiva and kolelim, and the homes that its alumni have built and will build in
+                                        the future, are places where the divine presence resides and from which it
+                                        finds pleasure.
+                                        Those who have the opportunity to observe the spiritual beauty of these holy
+                                        "Mishkanos" are awed by its unique atmosphere. The yeshiva bachurim and kolel
+                                        members that are fortunate to serve Hashem between its walls are Torah students
+                                        with tremendous potential. They eagerly delve into the depths of the Talmud and
+                                        Shulchan Aruch, amassing extensive Talmudic and Halachic knowledge, and
+                                        becoming the future Torah leaders and talmidei chachamim of our nation.</p>
+                                </div>
+                                <div class="bottom__img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content Hurrah" >
+                <!-- scroll event target -->
+                <div id="aboutHuruah"></div>
+                <div class="sign_wrapper">
+                    <div class="hurrah right_top_sign">
+                        <h2>Huruah</h2>
+                        <img src="images/abstract.png" alt="abstract">
+                    </div>
+                </div>
+                <div class="Hurrah_wrapper">
+                    <div class="hurrah__photo"></div>
+                    <div class="hurrah__text">
+                        <div class="description__text">
+                            <div class="space"></div>
+                            <div class="description">
+                                <p>The Rabbi shlit"a is a capable leader and a brilliant general of his prestigious
+                                    Torah-force. His vast experience in spreading Torah and guiding young men earned
+                                    him the respect and
+                                    devotion of hundreds of students. the Rov dedicated himself entirely to bringing
+                                    out the best of the young men in the community. His efforts bore beautiful fruit,
+                                    and many of his students are today exceptional talmidei chachamim, and people with
+                                    a deep commitment to Torah and divine service.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <!-- scroll event target -->
+                <div id="aboutKollel"></div>
+                <div class="about_Kollel">
+                    <div class="aboutUs left_top_sign">
+                        <img src="images/abstract.png" alt="abstract">
+                        <h2>Kollel</h2>
+                    </div>
+                    <div class="content__Kollel">
+                        <div class="Kollel_wrapper">
+                            <div class="kollel_about">
+                                <h3 class="kolel">Kollel Avreichim-Monsey</h3>
+                                <p class="description">The Kolel in Monsey is the perfect setting where a select group
+                                    of diligent and serious young men can advance in their studies and make progress in
+                                    their learning. From early until well into the evening, these promising scholars
+                                    apply themselves fully to their studies. The Rabbi shlit"a has strong connection
+                                    with the kolel, guiding the the young me towards achieving greatness.</p>
+                                <div class="btn_kollel">
+                                    <form>
+                                        <button>Donate Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="kollel_picture">
+                                <img src="images/f732fc65afb3fdfa2f7b079ee5cb0eba2fd9694a.png" alt="kolel">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <!-- scroll event target -->
+                <div id="aboutShul"></div>
+                <div class="sign_wrapper shul_">
+                    <div class="shul hurrah right_top_sign">
+                        <h2>Shul</h2>
+                        <img src="images/abstract.png" alt="abstract">
+                    </div>
+                    <div class="backgr_grey">
+                        <div class="shul_text">
+                            <p class="description hurrah_descr">Fortunate are those who take part in the development
+                                and advancement of these "dwelling places for Hashem". The blessings of the Rebbe
+                                shlit"a surely follow all who aid his prodigious Torah enterprise, and combine with the
+                                blessings that are reserved for those who assist the Torah and its scholars. Watch your
+                                investment in Torah multiply and bring you bountiful dividends on both worlds!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-wrap-outer">
+                    <div class="box-before-slider"></div>
+                    <div id="myHTMLWrapper" class="slider-wrap"></div>
+                </div>
+
+            </div>
+            <div class="content">
+                <!-- scroll event target -->
+                <div id="donate"></div>
+                <div class="donate aboutUs left_top_sign">
+                    <img src="images/abstract.png" alt="abstract">
+                    <h2>Donate Now</h2>
+                </div>
+                <div class="donate_now">
+                    <div class="donate_value">
+                        <div class="radio-outer">
+
+                            <div class="text-left-donate">
+                                <h3 class="">Have A Zechus And Donate</h3>
+                                <p class="">Donating for A great cause, to help the shul, Kollel, Bais huruah
+                                    contineu doing what they are doing…</p>
+                            </div>
+
+                            <div class="radio-block">
+                                <div class="df">
+                                    <div class="radio-wrap">
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad1">
+                                            <label for="rad1">$18</label>
+                                        </div>
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad2">
+                                            <label for="rad2">$36</label>
+                                        </div>
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad3">
+                                            <label for="rad3">$85</label>
+                                        </div>
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad4">
+                                            <label for="rad4">$120</label>
+                                        </div>
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad5">
+                                            <label for="rad5">$200</label>
+                                        </div>
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad6">
+                                            <label for="rad6">$250</label>
+                                        </div>
+                                    </div>
+                                    <div class="vertical-line"></div>
+                                    <div class="radio-wrap m-t-29">
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad7">
+                                            <label class="width-105" for="rad7">$400</label>
+                                            <div class="text">
+                                                אברך לשבוע
+                                            </div>
+                                        </div>
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad8">
+                                            <label class="width-105" for="rad8">$800</label>
+                                            <div class="text">
+                                                אברך לחודש
+                                            </div>
+                                        </div>
+                                        <div class="radio-button">
+                                            <input type="checkbox" name="" id="rad9">
+                                            <label class="width-105" for="rad9">$2500</label>
+                                            <div class="text">
+                                                אברך לשנה~
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vertical-line"></div>
+                                    <div class="submit-wrap">
+                                        <div class="or">
+                                            OR
+                                        </div>
+                                        <div class="input-wrap amount">
+                                            <div class="icon-dol">
+                                                $
+                                            </div>
+                                            <input type="text">
+                                        </div>
+                                        <div class="button-donate">
+                                            <button>
+                                                Donate
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content donatefild">
+                <div class="caption">Donate</div>
+                <p class="details">
+                    Fortunate are those who take part in the development and advancement of these "dwelling places for
+                    Hashem". The blessings of the Rebbe shlit"a surely follow all who aid his prodigious Torah
+                    enterprise, and combine with the blessings that are reserved for those who assist the Torah and its
+                    scholars. Watch your investment in Torah multiply and bring you bountiful dividends on both worlds!
+                </p>
+                <div class="fields-wrap">
+                    <div class="left">
+                        <div class="input-wrap">
+                            <input placeholder="Full Name" type="text">
+                        </div>
+                        <div class="input-wrap">
+                            <input placeholder="Address" type="text">
+                        </div>
+                        <div class="input-wrap">
+                            <input placeholder="Address" type="text">
+                        </div>
+                        <div class="input-wrap">
+                            <input placeholder="Phone number" type="text">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="input-wrap">
+                            <input placeholder="$120" type="text">
+                        </div>
+                        <div class="input-wrap">
+                            <input placeholder="Card Numbers" type="text">
+                        </div>
+                        <div class="wrap-small">
+                            <div class="input-wrap">
+                                <input placeholder="00/0000" type="text">
+                            </div>
+                            <div class="input-wrap">
+                                <input placeholder="CVC" type="text">
+                            </div>
+                        </div>
+                        <div class="button-wrap">
+                            <button>
+                                Submit Payment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content weekly-torahs">
+                <!-- scroll event target -->
+                <div id="weeklyTorahs"></div>
+                <div class="donate aboutUs left_top_sign">
+                    <img src="images/abstract.png" alt="abstract">
+                    <h2>Weekly
+                        Torahs</h2>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <img width="37px" src="images/print.png" alt="">
+                            <img width="37px" src="images/download-light.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wrap">
+                <div class="footer">
+                    <img class="footer-logo" width="103px" src="images/7578294f72f6cb51cd3b7543fd84e8da44739aa4.png"
+                        alt="">
+                    <div class="footer--row">
+                        <div class="footer--item">
+                            <div>
+                                <b>Tosh Monsey</b>
+                            </div>
+                            <div>
+                                About Us
+                            </div>
+                            <div>
+                                Huruah
+                            </div>
+                            <div>
+                                Kollel
+                            </div>
+                            <div>
+                                Shul
+                            </div>
+                            <div>
+                                Donate
+                            </div>
+                        </div>
+                        <div class="footer--item">
+                            <div>
+                                5 Wiener Dr,
+                            </div>
+                            <div>
+                                Monsey, NY 10952
+                            </div>
+                            <div>
+                                View on map
+                            </div>
+                        </div>
+                        <div class="footer--item">
+                            <div>
+                                toshmonsey@gmail.com
+                            </div>
+                            <div>
+                                +845 371 7607
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        dataImg = [
+            'images/c059285180c704ae4f8bf0116f25090f131e695b.png',
+            'images/230cb66e7b50bef7683dfde90231bc1c04e092b6.png',
+            'images/b5cc6a2d1ee5f3ecc05ea1f77c0d3aaff0bcfb43.png',
+            'images/cdf478d340673f3203fc334b57bbef6856cdd97e.png',
+            'images/9e9748fcd17e0f6cba80d533ea334df4f6f47c4e.png',
+            'images/c059285180c704ae4f8bf0116f25090f131e695b.png',
+            'images/230cb66e7b50bef7683dfde90231bc1c04e092b6.png',
+            'images/b5cc6a2d1ee5f3ecc05ea1f77c0d3aaff0bcfb43.png',
+            'images/cdf478d340673f3203fc334b57bbef6856cdd97e.png',
+            'images/9e9748fcd17e0f6cba80d533ea334df4f6f47c4e.png'
+        ];
+        var myHTML = '';
+        var active = '';
+        var next = '';
+        let prev = '';
+        var slideIndex = 3;
+        var sliderAmount = 5;
+
+        var wrapper = document.getElementById("myHTMLWrapper");
+
+        this.getSlides();
+        this.changeSlider();
+
+        function changeSlider() {
+            if (window.innerWidth < 1200 && window.innerWidth > 992) {
+                this.sliderAmount = 4;
+                this.slideIndex = 2;
+                this.getSlides();
+            } else if (window.innerWidth > 1200) {
+                this.sliderAmount = 5;
+                this.slideIndex = 3;
+                this.getSlides();
+            } else if (window.innerWidth < 992) {
+                this.sliderAmount = 3;
+                this.slideIndex = 1;
+                this.getSlides();
+            }
+        }
+
+        function onResizeScreen() {
+            console.log(window.innerWidth, 'cerf');
+            this.changeSlider();
+        }
+
+        function getSlides() {
+            this.wrapper.style.opacity = "0.0"
+            this.wrapper.style.pointerEvents = "none";
+            this.myHTML = '';
+            for (var i = 0; i < this.sliderAmount; i++) {
+                dataImg[i]
+                if (i === this.slideIndex) {
+                    active = 'active'
+                    next = `<button id="btnNext" class="btn-next" onclick="sliderNext()"></button>`;
+                    prev = `<button class="btn-prev" onclick="sliderPrev()"></button>`;
+                } else {
+                    active = ''
+                    next = ``;
+                    prev = ``;
+                }
+                this.myHTML += `
+                <div class="side-wrap` + ' ' + active + `">
+                    `+ prev + `
+                    <img onclick="selectSlide(` + i + `)" src="` + dataImg[i] + `" alt="">
+                    `+ next + `
+                </div>
+                `;
+            }
+            console.log('test');
+            setTimeout(() => {
+                this.wrapper.style.opacity = "1"
+                this.wrapper.style.pointerEvents = "all";
+                wrapper.innerHTML = myHTML;
+            }, 500);
+        }
+        function sliderNext() {
+            let data = this.dataImg.splice(0, 1);
+            this.dataImg.push(data[0]);
+            console.log(this.dataImg, 'dataImg');
+            this.getSlides();
+        }
+        function sliderPrev(i) {
+            let data = this.dataImg.splice(-1, 1);
+            this.dataImg.unshift(data[0]);
+            console.log(this.dataImg, 'dataImg');
+            this.getSlides();
+        }
+        function selectSlide(index) {
+            let data
+            if (index < this.slideIndex) {
+                data = this.dataImg.reverse().splice(0, this.slideIndex - index);
+                this.dataImg.reverse()
+                data;
+                for (const key in data) {
+                    this.dataImg.unshift(data[key]);
+                }
+                console.log(this.dataImg, 'dataImg');
+                this.getSlides();
+            } else if (index > this.slideIndex) {
+                data = this.dataImg.splice(0, index - this.slideIndex);
+                this.dataImg.push(data[0]);
+                console.log(this.dataImg, 'dataImg');
+                this.getSlides();
+            }
+            console.log(this.slideIndex, 'this.slideIndex');
+        }
+
+        window.addEventListener('scroll', resizeHeaderOnScroll)
+
+        function resizeHeaderOnScroll() {
+            window.onscroll = function () {
+                if (window.scrollY > 150) {
+                    document.getElementById("navBar").classList.add("onscroll");
+                } else {
+                    document.getElementById("navBar").classList.remove("onscroll")
+                }
+            }
+        }
+        function openSidebar() {
+            document.getElementsByTagName("body")[0].style.overflow = "hidden";
+            window.removeEventListener('scroll', resizeHeaderOnScroll)
+            document.getElementById("sidebar").classList.toggle('show');
+            document.getElementById("bgSidebar").classList.toggle('show');
+        }
+        function closeSidebar() {
+            document.getElementsByTagName("body")[0].style.overflow = "auto";
+            window.addEventListener('scroll', resizeHeaderOnScroll)
+            document.getElementById("sidebar").classList.remove('show');
+            document.getElementById("bgSidebar").classList.remove('show');
+        }
+
+        function goTab(element, evt, tabName) {
+            var elmnt = document.getElementById(tabName);
+            elmnt.style.position = 'relative';
+            elmnt.style.top = '-150px';
+            setTimeout(() => {
+                this.closeSidebar();
+                elmnt.scrollIntoView(
+                    {
+                        behavior: 'smooth',
+                        block: 'start'
+                    },
+                );
+                elmnt.style.position = '0';
+                elmnt.style.top = '0';
+            }, 300);
+
+        }
+    </script>
+</body>
+
+</html>

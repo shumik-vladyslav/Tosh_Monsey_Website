@@ -1,0 +1,1397 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("assets/fonts/(Avenir-Book)Avenir.ttc") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("assets/fonts/(Arial-Black)ArialBlack.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pekan";
+  src: url("assets/fonts/(Pekan-Bold)XT_PekanLight.TTF") format("truetype");
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Avenir;
+}
+.main-wrap {
+  display: flex;
+  min-height: 100vh;
+}
+.side-bar {
+  position: fixed;
+  transition: all 0.3s;
+  width: 0;
+  min-width: 0px;
+  overflow: hidden;
+  height: 100%;
+  overflow-y: auto;
+  background: #a3a3a3;
+  z-index: 1111;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.close-sidebar-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 28px;
+  margin-right: 0px;
+  cursor: pointer;
+  color: white;
+}
+.menu--item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.3s;
+  padding-left: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.menu--item:last-child {
+  margin-bottom: 0;
+}
+.menu--item:first-child {
+  margin-top: 0;
+}
+.menu--item:hover {
+  background: #2a4258;
+}
+.menu-icon {
+  font-size: 28px;
+  margin: 20px;
+  cursor: pointer;
+}
+.icon-wrap {
+  margin-right: 15px;
+  font-size: 20px;
+}
+.df {
+  display: flex;
+}
+.head-nav {
+  display: flex;
+  width: 100%;
+  max-width: 1049px;
+  justify-content: space-between;
+  transition: all 0.3s;
+  background: #a3a3a3;
+  padding-right: 54px;
+  height: 103px;
+}
+.head-nav--item {
+  background: #a3a3a3;
+  width: 100%;
+  max-width: 122px;
+  padding: 0px 10px;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.head-nav--item:hover {
+  background: #2a4258;
+}
+
+.main {
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  transition: all 0.3s;
+  z-index: 100;
+}
+.logo-nav {
+  width: 105px;
+  margin-left: 30px;
+  margin-top: 26px;
+  margin-bottom: -41px;
+  transition: all 0.3s;
+}
+.header.onscroll {
+  height: 74px;
+  background: #a3a3a3;
+}
+.header.onscroll > .head-nav {
+  width: 100%;
+  max-width: 1070px;
+  height: 74px;
+  justify-content: space-between;
+  padding-right: 0;
+}
+.header.onscroll > .logo-nav {
+  width: 60px;
+  margin-left: 34px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 60px;
+}
+.header.onscroll > div.head-nav > .head-nav--item {
+  width: 100%;
+  max-width: 116px;
+  height: 74px;
+  padding: 0px 15px;
+  box-sizing: unset;
+}
+.header.onscroll > div.head-nav > .head-nav--item:hover {
+  background: #a3a3a3;
+  color: #2a4258;
+}
+.slider-wrap-outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.box-before-slider {
+  width: 100%;
+  height: 125px;
+  background-color: #2e4459;
+}
+.slider-wrap {
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.5s;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-height: 350px;
+  justify-content: flex-end;
+  margin-top: -156px;
+}
+.side-wrap {
+  width: 100%;
+  max-width: 147px;
+  height: 125px;
+  margin: 0 38px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.side-wrap:last-child {
+  margin-right: 0;
+}
+.side-wrap.active {
+  width: 100%;
+  max-width: 443px;
+  min-width: 443px;
+  height: fit-content;
+  max-height: 350px;
+  position: relative;
+}
+.side-wrap > img {
+  height: 100%;
+  width: auto;
+}
+.side-wrap.active > img {
+  height: auto;
+  width: 100%;
+}
+.side-wrap.active > button {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  opacity: 0.57;
+  border: none;
+  border-top: 5px solid #979797;
+  border-left: 5px solid #979797;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+.side-wrap.active > button.btn-next {
+  right: 20px;
+  transform: rotate(135deg);
+  top: 50%;
+  margin-top: -16px;
+}
+.side-wrap.active > button.btn-prev {
+  left: 20px;
+  transform: rotate(-45deg);
+  top: 50%;
+  margin-top: -16px;
+}
+.side-bar.show {
+  z-index: 111;
+}
+.radio-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 231px;
+}
+.radio-button {
+  margin: 22px;
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.radio-button > input {
+  display: none;
+}
+.radio-button > input + label {
+  width: 87px;
+  height: 40px;
+  border: solid 3px #2e4459;
+  color: #2e4459;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.radio-button > input:checked + label {
+  width: 87px;
+  height: 40px;
+  background-color: #2e4459;
+  color: #ffffff;
+}
+.radio-button > .text {
+  font-family: Pekan;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #2e4459;
+  padding: 4px;
+  border-bottom: 3px solid #2e4459;
+  width: 113px;
+}
+label.width-105 {
+  width: 105px !important;
+}
+.vertical-line {
+  width: 3px;
+  height: 162px;
+  background: #2e4459;
+  margin-right: 32px;
+}
+.ai-c {
+  align-items: center;
+}
+.m-t-29 {
+  margin-right: 29px;
+}
+.input-wrap.amount {
+  position: relative;
+  margin-bottom: 22px;
+}
+.input-wrap.amount > input {
+  width: 194px;
+  height: 40px;
+  border: solid 3px #2e4459;
+  box-sizing: border-box;
+  background: none;
+  text-align: right;
+  padding-right: 15px;
+  color: #2e4459;
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+}
+.icon-dol {
+  position: absolute;
+  top: 7px;
+  left: 13px;
+  font-family: Avenir;
+  font-size: 21px;
+  font-weight: 900;
+  color: #2e4459;
+}
+.button-donate > button {
+  width: 194px;
+  height: 40px;
+  background-color: #2e4459;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.submit-wrap > .or {
+  font-family: Avenir;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  color: #2e4459;
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+.content.donatefild {
+  padding-top: 58px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 636px;
+  margin: auto;
+  margin-bottom: 72px;
+}
+.content > .caption {
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #2e4459;
+  margin-bottom: 27px;
+}
+.content > .details {
+  font-family: Avenir;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #7e7e7e;
+  margin-bottom: 73px;
+}
+.fields-wrap {
+  display: flex;
+}
+.fields-wrap > .left {
+  min-width: calc(50% - 12px);
+  width: calc(50% - 12px);
+  margin-right: 24px;
+}
+.fields-wrap > .right {
+  min-width: calc(50% - 12px);
+  width: calc(50% - 12px);
+}
+.fields-wrap .input-wrap {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.fields-wrap .input-wrap > input {
+  width: 100%;
+  max-width: 306px;
+  height: 40px;
+  border: solid 3px #2e4459;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding-left: 19px;
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  color: #a2a2a2;
+}
+.wrap-small {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.wrap-small > .input-wrap {
+  width: calc(50% - 14px);
+  min-width: calc(50% - 14px);
+}
+.wrap-small > .input-wrap > input {
+  width: 100%;
+}
+.fields-wrap .button-wrap > button {
+  height: 40px;
+  background-color: #2e4459;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+  max-width: 306px;
+}
+.footer-wrap {
+  height: 218px;
+  background-color: #2e4459;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.footer-wrap .footer {
+  width: 100%;
+  max-width: 969px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+}
+.footer--item {
+  font-family: Avenir;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+}
+.footer--row {
+  width: 100%;
+  justify-content: space-around;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+.content.weekly-torahs .card-wrap {
+  padding: 138px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content.weekly-torahs .card {
+  width: 174px;
+  min-width: 174px;
+  height: 183px;
+  border: solid 3px #2e4459;
+  box-sizing: border-box;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 74px;
+  display: flex;
+  align-items: flex-end;
+}
+.content.weekly-torahs .card > .card-footer {
+  width: 174px;
+  height: 65px;
+  background-color: #2e4459;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: space-between;
+}
+.content.weekly-torahs .card > .card-footer > img {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 722px) {
+  .fields-wrap {
+    display: flex;
+    flex-flow: column;
+  }
+  .fields-wrap > .left {
+    min-width: unset;
+    width: 100%;
+    margin-right: 0;
+  }
+  .fields-wrap > .right {
+    min-width: unset;
+    width: 100%;
+  }
+  .fields-wrap .input-wrap > input {
+    max-width: 100%;
+  }
+  .fields-wrap .button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-wrap {
+    height: unset;
+  }
+  .footer-wrap .footer {
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .footer--item {
+    margin-bottom: 20px;
+  }
+  .footer-logo {
+    align-self: center;
+  }
+  .footer--row {
+    padding-left: 0;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer--row {
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}
+
+/*===========Specifications===========*/
+
+a {
+  text-decoration: none;
+}
+
+.df {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+}
+
+/*========.content .head=======*/
+.content.head {
+  background: url("images/main.png") center no-repeat;
+  background-size: cover;
+  height: 640px;
+}
+.this_week_torah {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 325px;
+  height: 54px;
+  background-color: #d8d8d8;
+  top: 505px;
+  right: 69px;
+}
+.this_week_torah h3 {
+  width: 197px;
+  height: 25px;
+  margin-top: 16px;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #2e4459;
+}
+.archived {
+  width: 86px;
+  border: solid 3px #d8d8d8;
+  background-color: #2e4459;
+}
+.archived p {
+  font-family: Avenir, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #d8d8d8;
+  cursor: pointer;
+}
+.this_week_torah img {
+  display: block;
+  margin-right: 7px;
+  align-self: center;
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+}
+/*======About us=====*/
+
+.aboutUs {
+  width: 42%;
+  height: 85px;
+  background-color: #2e4459;
+  margin-top: -42px;
+  max-width: 600px;
+}
+.left_top_sign img {
+  display: block;
+  max-width: 68%;
+}
+.aboutUs.left_top_sign {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.aboutUs h2,
+.hurrah h2 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #ffffff;
+  margin: auto;
+}
+.about__content h1 {
+  font-family: Avenir, sans-serif;
+  font-size: 51px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  text-align: right;
+  color: #2e4459;
+  width: 37%;
+  margin: 10px auto 48px auto;
+}
+.content__top {
+  display: flex;
+  height: 100%;
+}
+.cont_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+.cont_img {
+  margin-left: 40px;
+  width: 40%;
+  height: 197px;
+  background: url("images/2c15583fd66e352a50140c8e4890c1ae951b05ad.png") 50% 22% no-repeat;
+  background-size: cover;
+}
+.bottom__img {
+  margin-right: 40px;
+  width: 40%;
+  height: 197px;
+  background: url("images/4669e9bba8874a5f20d453874b0760edb9caf6d5.png");
+  background-size: cover;
+}
+.about__text {
+  width: 42%;
+  height: 197px;
+  overflow: hidden;
+}
+.description {
+  font-family: Avenir, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  text-align: justify;
+  color: #7e7e7e;
+  max-width: 1000px;
+}
+.square {
+  width: 290px;
+  height: 288px;
+  background-color: #2e4459;
+  margin-top: -91px;
+}
+.content__bottom {
+  display: flex;
+  margin-top: 57px;
+}
+.square.bottom {
+  margin-top: 0;
+}
+
+/*============.Hurrah=========*/
+.sign_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 110px;
+  border-top: 3px solid #2e4459;
+}
+.Hurrah_wrapper {
+  display: flex;
+  margin-bottom: 150px;
+}
+.hurrah {
+  width: 42%;
+  height: 85px;
+  background-color: #2e4459;
+  margin-top: -42px;
+  max-width: 600px;
+}
+.right_top_sign img {
+  display: block;
+  max-width: 68%;
+}
+.right_top_sign {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.hurrah__photo {
+  flex-basis: 50%;
+  background: url("images/318350194e0ae09a6eda5999fa31cfd6a905ea0f.png") top no-repeat;
+  background-size: cover;
+  transform: scale(-1, 1);
+  height: 476px;
+  width: 100%;
+  margin-top: -46px;
+}
+.hurrah__text {
+  flex-basis: 50%;
+  align-self: flex-end;
+}
+.description__text {
+  position: relative;
+  height: 318px;
+  background-color: #d8d8d8;
+}
+.description__text .description {
+  border: 3px solid #2e4459;
+  padding-top: 2.4em;
+  height: 290px;
+  margin: 0 auto;
+  max-width: 80%;
+}
+.description__text .description p {
+  padding: 0 55px;
+}
+.space {
+  height: 60px;
+}
+
+/*=====#aboutKollel======*/
+
+.Kollel_wrapper {
+  display: flex;
+  justify-content: center;
+  height: 370px;
+  background-color: #d8d8d8;
+}
+.about_Kollel .left_top_sign {
+  position: absolute;
+}
+.kollel_about,
+.kollel_picture {
+  flex-basis: 50%;
+}
+.kollel_picture img {
+  width: 557px;
+  height: 332px;
+  margin-top: 80px;
+  box-shadow: 20px -30px #2e4459;
+}
+.kolel {
+  font-family: Avenir, sans-serif;
+  font-size: 19px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #2e4459;
+}
+.description__text .description,
+.kollel_about .description {
+  color: #2e4459;
+}
+.kollel_about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 57px;
+  margin-right: 100px;
+}
+.kollel_about h3,
+.kollel_about .description {
+  width: 557px;
+}
+.kollel_about .description {
+  margin-bottom: 32px;
+}
+.kollel_about h3 {
+  text-align: left;
+  margin-bottom: 0;
+}
+.btn_kollel {
+  width: 557px;
+}
+.btn_kollel button {
+  width: 150px;
+  height: 38px;
+  background-color: #2e4459;
+  font-family: Avenir, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn_kollel button:hover {
+  background-color: #455c72;
+  transition: 0.5s;
+}
+
+/*========.Shul========*/
+
+.backgr_grey {
+  height: 250px;
+  background-color: #d8d8d8;
+  width: 100%;
+}
+.shul.right_top_sign {
+  position: absolute;
+  border-top: none;
+}
+.shul_ {
+  border-top: none;
+  margin-top: 150px;
+}
+.shul_text {
+  width: 367px;
+  height: 145px;
+  margin: 40px 0 0 15%;
+}
+.hurrah_descr {
+  color: #2e4459;
+}
+
+/*============.donate=========*/
+.donate {
+  position: absolute;
+  margin-top: -38px;
+}
+.donate_now {
+  display: flex;
+  align-items: flex-end;
+  min-height: 651px;
+  background: url("images/2aafbd7b4d476eaf568efb77e37882568ea1ee6d.png") center no-repeat;
+  background-size: cover;
+  margin-top: 110px;
+}
+.donate_value {
+  display: flex;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.69);
+  padding: 10px;
+  min-height: 257px;
+}
+.radio-outer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  width: 100%;
+  margin: auto;
+}
+.text-left-donate{
+  max-width: 324px;
+}
+.text-left-donate h3{
+  font-family: Avenir;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  color: #2e4459;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.text-left-donate p{
+  font-family: Avenir;
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: 1.3px;
+  color: #000000;
+}
+.value_info h3 {
+  font-family: Avenir, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  color: #2e4459;
+}
+.value_info p {
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  color: #000000;
+}
+
+/*=========Media_requests========*/
+
+@media screen and (max-width: 1440px) {
+  .side-wrap {
+    margin: 0 20px;
+  }
+  /*.aboutUs*/
+  .aboutUs {
+    width: 600px;
+    height: 75px;
+  }
+  /*.kollel_about*/
+  .kollel_about,
+  .kollel_picture {
+    flex-basis: 30%;
+  }
+  .kollel_picture img {
+    width: auto;
+  }
+  .kollel_about h3,
+  .kollel_about .description,
+  .btn_kollel {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .side-wrap {
+    margin: 0 5px;
+  }
+  .square {
+    width: 230px;
+  }
+  /*.hurrah*/
+  .description__text .description p {
+    padding: 0 25px;
+  }
+  .description__text .description {
+    padding-top: 10px;
+  }
+  /*.kollel_about*/
+  .kollel_about {
+    margin-right: 50px;
+  }
+  .sm {
+    font-size: 10px;
+  }
+  /*.shul_*/
+  .shul_text {
+    width: 310px;
+    margin: 40px 0 0 8%;
+  }
+}
+@media screen and (max-width: 1200px){
+  .radio-outer{
+    flex-flow: column;
+  }
+}
+@media screen and (max-width: 992px) {
+  .box-before-slider{
+    display: none;
+  }
+  .side-bar.show {
+    width: 320px;
+    min-width: 320px;
+    box-shadow: 0 0 15px #000000bd;
+  }
+
+  .d-block-md {
+    display: block;
+  }
+
+  .d-flex-md {
+    display: flex;
+  }
+
+  .d-none-md {
+    display: none;
+  }
+
+  .bg-sidebar {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background: #58585852;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .bg-sidebar.show {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .header {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-icon {
+    font-size: 28px;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 40px;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 3px black;
+  }
+
+  .logo-nav {
+    margin: 0 !important;
+  }
+
+  /*.about__content*/
+  .content__top,
+  .content__bottom {
+    flex-direction: column;
+  }
+
+  .square {
+    display: none;
+  }
+
+  .cont_img {
+    margin-left: 0;
+    width: 45%;
+  }
+
+  .bottom__img {
+    margin-right: 0;
+    width: 45%;
+  }
+
+  .about__text {
+    width: 45%;
+  }
+
+  .content__bottom {
+    margin-top: 35px;
+  }
+
+  .about__content h1 {
+    font-family: Avenir, sans-serif;
+    font-size: 51px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #2e4459;
+    width: 100%;
+    margin: 20px auto 20px auto;
+  }
+  /*.hurrah*/
+  .hurrah__photo {
+    height: 376px;
+  }
+  .space {
+    height: 5px;
+  }
+  .Hurrah_wrapper {
+    margin-bottom: 108px;
+  }
+  /*.kollel_about*/
+  .kollel_picture img {
+    width: 290px;
+    height: 250px;
+    box-shadow: 14px -19px #2e4459;
+  }
+  .kollel_about .description,
+  .kollel_about h3,
+  .btn_kollel {
+    width: 330px;
+  }
+  .kollel_about h3 {
+    margin-top: 0;
+  }
+  /*.shul*/
+  .shul_text {
+    margin: 32px 0 0 8%;
+  }
+  .slider-wrap {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 61px auto auto;
+    height: unset;
+  }
+  .side-wrap {
+    order: 2;
+    max-width: 131px;
+  }
+  .side-wrap.active {
+    order: 1;
+    margin-bottom: 20px;
+    height: unset;
+    min-width: unset;
+  }
+  .side-bar.show {
+    width: 320px;
+    min-width: 320px;
+    box-shadow: 0 0 15px #000000bd;
+  }
+  .d-block-md {
+    display: block;
+  }
+  .d-flex-md {
+    display: flex;
+  }
+  .d-none-md {
+    display: none;
+  }
+  .bg-sidebar {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background: #58585852;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .bg-sidebar.show {
+    pointer-events: all;
+    opacity: 1;
+  }
+  .main {
+    width: 100%;
+  }
+  .header {
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-icon {
+    font-size: 28px;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    align-items: center;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+  }
+  .logo-nav {
+    margin: 0 !important;
+  }
+
+  .content.weekly-torahs .card-wrap {
+    padding: 10px !important;
+    justify-content: center !important;
+    padding-top: 75px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .content.weekly-torahs .card-wrap{
+    padding-top: 100px !important;
+  }
+  .donate_value{
+    padding-top: 90px;
+  }
+  .radio-block .df{
+    flex-flow: column;
+    align-items: center;
+  }
+  .vertical-line{
+    display: none;
+  }
+  .radio-block .radio-wrap{
+    margin-right: 0 !important;
+  }
+  .radio-block .or{
+    text-align: center;
+  }
+  /*.aboutUs*/
+  .aboutUs,
+  .hurrah {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .cont_wrapper {
+    flex-direction: column;
+  }
+
+  .cont_wrapper.bottom {
+    flex-direction: column-reverse;
+  }
+
+  .cont_img,
+  .about__text,
+  .bottom__img {
+    margin: 0 auto;
+    width: 95%;
+    height: 400px;
+  }
+
+  .cont_img,
+  .about__text,
+  .bottom__img {
+    margin-bottom: 20px;
+  }
+
+  .content__bottom {
+    margin-top: 0;
+  }
+
+  .description {
+    font-size: 1.2em;
+  }
+
+  /*.hurrah*/
+  .Hurrah_wrapper {
+    width: 95%;
+    margin: 15px auto 50px auto;
+    flex-direction: column;
+  }
+
+  .hurrah__photo {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .hurrah {
+    margin-top: -85px;
+  }
+
+  .description__text .description {
+    border: none;
+    max-width: 100%;
+  }
+
+  /*.Kollel*/
+  .Kollel_wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+  }
+
+  .kollel_picture img {
+    width: 93%;
+    height: auto;
+    margin: 127px 15px 0 15px;
+  }
+
+  .kollel_about {
+    margin-right: 0;
+  }
+
+  .kollel_about .description,
+  .kollel_about h3,
+  .btn_kollel {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: auto;
+    align-self: center;
+  }
+
+  .btn_kollel button {
+    margin-bottom: 20px;
+  }
+  /*.shul*/
+  .shul_text {
+    width: 90%;
+    margin: 40px auto 0 auto;
+  }
+  .backgr_grey {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /*.content head*/
+  .this_week_torah {
+    width: 260px;
+    height: 45px;
+    right: 15px;
+    bottom: 33px;
+    top: unset;
+  }
+  .this_week_torah h3 {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+  .this_week_torah i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .archived p {
+    font-size: 8px;
+  }
+  .about__content h1 {
+    font-size: 40px;
+  }
+  .description {
+    font-size: 16px;
+  }
+  .kollel_about {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*.aboutUs*/
+  .aboutUs {
+    height: 60px;
+  }
+  .aboutUs h2 {
+    font-size: 16px;
+  }
+  .description {
+    font-size: 13px;
+  }
+  .kollel_picture img {
+    width: 88%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .description {
+    font-size: 16px;
+  }
+  .kollel_about {
+    margin-right: 200px;
+  }
+  .shul_text {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cont_img,
+  .bottom__img {
+    height: 297px;
+  }
+
+  .about__text {
+    height: 297px;
+  }
+
+  .square {
+    height: 388px;
+  }
+}
