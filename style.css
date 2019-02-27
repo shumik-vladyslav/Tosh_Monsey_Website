@@ -102,7 +102,7 @@ body {
 .head-nav--item {
   background: #a3a3a3;
   width: 100%;
-  max-width: 122px;
+  max-width: 174px;
   padding: 0px 10px;
   color: white;
   text-align: center;
@@ -158,7 +158,7 @@ body {
 }
 .header.onscroll > div.head-nav > .head-nav--item {
   width: 100%;
-  max-width: 116px;
+  max-width: 174px;
   height: 74px;
   padding: 0px 15px;
   box-sizing: unset;
@@ -265,7 +265,6 @@ body {
   width: 87px;
   height: 40px;
   border: solid 3px #2e4459;
-  color: #2e4459;
   font-family: Avenir;
   font-size: 16px;
   font-weight: 900;
@@ -273,12 +272,14 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  background-color: #2e4459;
+  color: #ffffff;
 }
 .radio-button > input:checked + label {
   width: 87px;
   height: 40px;
-  background-color: #2e4459;
-  color: #ffffff;
+  color: #2e4459;
+  background-color: #00000000;
 }
 .radio-button > .text {
   font-family: Pekan;
@@ -719,7 +720,6 @@ a {
   display: flex;
   justify-content: flex-end;
   margin-top: 110px;
-  border-top: 3px solid #2e4459;
 }
 .Hurrah_wrapper {
   display: flex;

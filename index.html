@@ -12,7 +12,7 @@
 </head>
 
 <body onresize="onResizeScreen()">
-    
+
     <div class="main-wrap">
         <div class="side-bar" id="sidebar">
             <div class="logo">
@@ -22,36 +22,24 @@
                 </div>
             </div>
             <div class="menu">
-                <div class="menu--item" onclick="goTab(this, event, 'aboutUs')">
-                    <div class="df">
-                        About Us
-                    </div>
-                </div>
-                <div class="menu--item" onclick="goTab(this, event, 'aboutKollel')">
-                    <div class="df">
-                        About The Kollel
-                    </div>
-                </div>
-                <div class="menu--item" onclick="goTab(this, event, 'aboutShul')">
-                    <div class="df">
-                        About The Shul
-                    </div>
-                </div>
-                <div class="menu--item" onclick="goTab(this, event, 'aboutHuruah')">
-                    <div class="df">
-                        About The Beis Huruah
-                    </div>
-                </div>
-                <div class="menu--item" onclick="goTab(this, event, 'donate')">
-                    <div class="df">
-                        Donate
-                    </div>
-                </div>
-                <div class="menu--item" onclick="goTab(this, event, 'weeklyTorahs')">
-                    <div class="df">
-                        Weekly torahs
-                    </div>
-                </div>
+                <a class="menu--item" onclick="goTab(this, event, 'aboutUs')">
+a                    About Us
+                </a>
+                <a class="menu--item" onclick="goTab(this, event, 'aboutKollel')">
+                    About The Kollel
+                </a>
+                <a class="menu--item" onclick="goTab(this, event, 'aboutShul')">
+                    About The Shul
+                </a>
+                <a class="menu--item" onclick="goTab(this, event, 'aboutHuruah')">
+                    About The Beis Huruah
+                </a>
+                <a class="menu--item" onclick="goTab(this, event, 'donate')">
+                    Donate
+                </a>
+                <a class="menu--item" onclick="goTab(this, event, 'weeklyTorahs')">
+                    Weekly torahs
+                </a>
             </div>
         </div>
         <div class="bg-sidebar" id="bgSidebar" onclick="closeSidebar()"></div>
@@ -62,24 +50,28 @@
                 </div>
                 <img class="logo-nav" src="images/7578294f72f6cb51cd3b7543fd84e8da44739aa4.png" alt="">
                 <div class="head-nav d-none-md">
-                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutUs')">
+                    <a class="head-nav--item" onclick="goTab(this, event, 'aboutUs')">
                         About Us
-                    </div>
-                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutKollel')">
-                        About The Kollel
-                    </div>
-                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutShul')">
-                        About The Shul
-                    </div>
-                    <div class="head-nav--item" onclick="goTab(this, event, 'aboutHuruah')">
-                        About The Beis Huruah
-                    </div>
-                    <div class="head-nav--item" onclick="goTab(this, event, 'donate')">
+                    </a>
+                    <a class="head-nav--item" onclick="goTab(this, event, 'aboutKollel')">
+                        About The <br>
+                        Kollel
+                    </a>
+                    <a class="head-nav--item" onclick="goTab(this, event, 'aboutShul')">
+                        About The <br> 
+                        Shul
+                    </a>
+                    <a class="head-nav--item" onclick="goTab(this, event, 'aboutHuruah')">
+                        About The <br>
+                        Beis Huruah
+                    </a>
+                    <a class="head-nav--item" onclick="goTab(this, event, 'donate')">
                         Donate
-                    </div>
-                    <div class="head-nav--item" onclick="goTab(this, event, 'weeklyTorahs')">
-                        Weekly torahs
-                    </div>
+                    </a>
+                    <a class="head-nav--item" onclick="goTab(this, event, 'weeklyTorahs')">
+                        Weekly br
+                        torahs
+                    </a>
                 </div>
             </div>
             <div class="content head">
@@ -143,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content Hurrah" >
+            <div class="content Hurrah">
                 <!-- scroll event target -->
                 <div id="aboutHuruah"></div>
                 <div class="sign_wrapper">
@@ -246,48 +238,48 @@
                                 <div class="df">
                                     <div class="radio-wrap">
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad1">
+                                            <input onclick="getCount(this)" value="$18" type="radio" name="counta" id="rad1">
                                             <label for="rad1">$18</label>
                                         </div>
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad2">
+                                            <input onclick="getCount(this)" type="radio" name="counta" value="$36" id="rad2">
                                             <label for="rad2">$36</label>
                                         </div>
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad3">
+                                            <input onclick="getCount(this)" type="radio" name="counta" value="$85" id="rad3">
                                             <label for="rad3">$85</label>
                                         </div>
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad4">
+                                            <input onclick="getCount(this)" type="radio" name="counta" value="$120" id="rad4">
                                             <label for="rad4">$120</label>
                                         </div>
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad5">
+                                            <input onclick="getCount(this)" type="radio" name="counta" value="$200" id="rad5">
                                             <label for="rad5">$200</label>
                                         </div>
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad6">
+                                            <input onclick="getCount(this)" type="radio" name="counta" value="$250" id="rad6">
                                             <label for="rad6">$250</label>
                                         </div>
                                     </div>
                                     <div class="vertical-line"></div>
                                     <div class="radio-wrap m-t-29">
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad7">
+                                            <input onclick="getCount(this)" type="radio" name="counta" id="rad7" value="$400">
                                             <label class="width-105" for="rad7">$400</label>
                                             <div class="text">
                                                 אברך לשבוע
                                             </div>
                                         </div>
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad8">
+                                            <input onclick="getCount(this)" type="radio" name="counta" id="rad8" value="$800">
                                             <label class="width-105" for="rad8">$800</label>
                                             <div class="text">
                                                 אברך לחודש
                                             </div>
                                         </div>
                                         <div class="radio-button">
-                                            <input type="checkbox" name="" id="rad9">
+                                            <input onclick="getCount(this)" type="radio" name="counta" id="rad9" value="$2500">
                                             <label class="width-105" for="rad9">$2500</label>
                                             <div class="text">
                                                 אברך לשנה~
@@ -303,7 +295,7 @@
                                             <div class="icon-dol">
                                                 $
                                             </div>
-                                            <input type="text">
+                                            <input id="amount" type="text" placeholder="Enter amount">
                                         </div>
                                         <div class="button-donate">
                                             <button>
@@ -343,7 +335,7 @@
                     </div>
                     <div class="right">
                         <div class="input-wrap">
-                            <input placeholder="$120" type="text">
+                            <input placeholder="Enter amount" id="amountDonate" type="text">
                         </div>
                         <div class="input-wrap">
                             <input placeholder="Card Numbers" type="text">
@@ -633,6 +625,10 @@
                 elmnt.style.top = '0';
             }, 300);
 
+        }
+        function getCount(elem){
+            document.getElementById('amount').value = elem.value;
+            document.getElementById('amountDonate').value = elem.value;
         }
     </script>
 </body>
